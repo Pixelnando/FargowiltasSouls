@@ -330,7 +330,7 @@ Mods: {
 			ForbiddenEnchant: Encantamento Proibído
 			FossilEnchant: Encantamento de Fóssil
 			FrostEnchant: Encantamento Congelado
-			GladiatorEnchant: Encantamento Congelado
+			GladiatorEnchant: Encantamento do Gladiador
 			GoldEnchant: Encantamento de Ouro
 			HallowEnchant: Encantamento Consagrado
 			HuntressEnchant: Encantamento da Caçadora
@@ -468,12 +468,10 @@ Mods: {
 			WorldShaperSoul: Alma do Modelador do Mundo
 			
 			// Ammo
-			
 			FargoArrow: Aljava de Flecha Amalgamada
 			FargoBullet: Bolsa de Projétil Amalgamada
 			
 			// Armor
-			
 			EridanusBattleplate: Placas de Batalha de Eridanus
 			EridanusHat: Chapéu de Eridanus
 			EridanusLegwear: Calças de Eridanus
@@ -495,7 +493,6 @@ Mods: {
 			StyxLeggings: Calças de Styx
 			
 			// Boss Bags
-			
 			AbomBag: Bolsa do Tesouro
 			CosmosBag: Bolsa do Tesouro
 			DeviBag: Bolsa do Tesouro
@@ -503,7 +500,6 @@ Mods: {
 			TrojanSquirrelBag: Bolsa do Tesouro
 			
 			// Consumables
-			
 			DeerSinew: Tendão de Cervo
 			MutantsCreditCard: Cartão de Crédito do Mutant
 			MutantsDiscountCard: Cartão de Desconto do Mutant
@@ -513,13 +509,11 @@ Mods: {
 			RabiesVaccine: Vacina de Raiva
 			
 			// Dyes
-			
 			LifeDye: Tintura Celestial
 			WillDye: Tintura da Força de Vontade
 			GaiaDye: Tintura de Gaia
 			
 			// Materials
-			
 			AbomEnergy: Energia Abominável
 			BrokenBlade: Lâmina Quebrada
 			BrokenHilt: Cabo Quebrado
@@ -529,7 +523,6 @@ Mods: {
 			PhantasmalEnergy: Energia Fantasmagórica
 			
 			// Misc
-			
 			EternityAdvisor: Orientador da Eternidade
 			GalacticReformer: Reformador Galáctico
 			MutantsFury: Fúria do Mutant
@@ -537,7 +530,6 @@ Mods: {
 			UniversalCollapse: Colapso Universal
 			
 			// Pets
-			
 			AccursedRags: Trapos Malditos
 			BabyScythe: Foice Bebê
 			ChibiHat: Chapéu Chibi
@@ -548,7 +540,6 @@ Mods: {
 			
 			// Placeables
 			// Relics
-			
 			AbomRelic: Relíquia do Abominationn
 			DeviRelic: Relíquia da Deviantt
 			EarthChampionRelic: Relíquia do Campeão da Terra
@@ -564,7 +555,6 @@ Mods: {
 			WillChampionRelic: Relíquia do Campeão da Vontade
 			
 			// Trophies
-			
 			AbomTrophy: Troféu do Abominationn
 			DeviTrophy: Troféu da Deviantt
 			EridanusTrophy: Troféu de Eridanus
@@ -578,7 +568,6 @@ Mods: {
 			TwentyTwoPainting: Pintura 22
 			
 			//Summons
-			
 			AbominationnVoodooDoll: Boneco de Vodu do Abominationn
 			AbomsCurse: Maldição do Abominationn
 			ChampionySigil: Símbolo meio Campeão
@@ -589,7 +578,6 @@ Mods: {
 			
 			// Weapons
 			// Boss Drops
-			
 			BoneZone: Canhão Furiosso
 			BrainStaff: Quebra Cerebral
 			DestroyerGun: Arma do Destruidor
@@ -606,7 +594,6 @@ Mods: {
 			TwinRangs: Gemeorangues
 			
 			// Challengers
-			
 			KamikazeSquirrelStaff: Cajado de Esquilo Kamikaze
 			MountedAcornGun: Arma de Bolota Montada
 			SnowballStaff: O Efeito Bola de Neve
@@ -614,7 +601,6 @@ Mods: {
 			TreeSword: Espada de Árvore
 			
 			// Final Upgrades
-			
 			HentaiSpear: O Penetrador
 			PhantasmalLeashOfCthulhu: Coleira Fantasmagórica de Cthulhu
 			SlimeRain: Chuva de Geleias
@@ -622,14 +608,12 @@ Mods: {
 			StyxGazer: Contemplador de Styx
 			
 			// Misc
-			
 			Mahoguny: Armogno
 			OvergrownKey: Chave Coberta
 			TophatSquirrelWeapon: Esquilo com Cartola
 			Vineslinger: Lança-vinhas
 			
 			// Swarm Drops
-			
 			BigBrainBuster: Grande Destruidor de Cérebros
 			Blender: O Liquidificador
 			DestroyerGun2: Canhão da Destruição
@@ -652,7 +636,6 @@ Mods: {
 			MasochistReal: Presente Esquecido
 			
 			// Patreon
-			
 			MedallionoftheFallenKing: Medalhão do Rei Caído
 			ComputationOrb: Esfera da Computação
 			StaffOfUnleashedOcean: Cajado do Oceano Desencadeado
@@ -668,7 +651,7 @@ Mods: {
 			SquidwardDoor: Porta do Lula Molusco
 			MissDrakovisFishingPole: Vara de Pesca da Senhorita Drakovi
 			CrimetroidEgg: Ovo Crimetroid
-			
+			NanoCore: Nanonúcleo
 			
 			
 		}
@@ -835,6 +818,7 @@ Mods: {
 			GladiatorEnchant: 
 				'''
 				Lanças choverão em inimigos atingidos
+				Oferece imunidade a recuos quando você está encarando o ataque
 				'Não se divertiram?'
 				'''
 			
@@ -1218,6 +1202,8 @@ Mods: {
 			
 			BoxofGizmos:
 				'''
+				Funciona em seu inventário
+				Fique parado para expor tesouros próximos
 				Oferece disparo automático a todos os itens
 				Reduz a velocidade de uso dos itens afetados em 20%
 				'''
@@ -1390,7 +1376,7 @@ Mods: {
 			
 			GalacticGlobe:
 				'''
-				Oferece imunidade a Invertido, Instável e Maldição da Lua
+				Oferece imunidade a Maldição da Anulação, Invertido, Instável e Maldição da Lua
 				Permite que o usuário controle a gravidade
 				Estabiliza a gravidade no espaço e em líquidos
 				Invoca os verdadeiros olhos de Cthulhu para te proteger
@@ -1438,6 +1424,7 @@ Mods: {
 				Você pode disparar ataques adicionais periodicamente dependendo do tipo da arma
 				Seus ataques críticos infligem Apodrecendo e Maldição de Betsy
 				Aperte a tecla Corrida Especial para fazer uma corrida de bola de fogo invencível curta
+				Aperte a tecla Ciclar Munição para ciclar munições (este efeito funciona passivamente do inventário)
 				Concede os efeitos do efeito negativo Molhado ao montar no Peixe-dragão Fofinho e controle da gravidade
 				Você congela tudo quando atingido, mas sofrer acertos consecutivos acumula penalidades na sua redução de danos
 				Invoca um Mini Disco Voador e verdadeiros olhos de Cthulhu amigáveis
@@ -1599,6 +1586,7 @@ Mods: {
 			SaucerControlConsole:
 				'''
 				Oferece imunidade a Eletrizado e Distorcido
+				Aperte a tecla Ciclar Munição para ciclar munições (este efeito funciona passivamente do inventário)
 				Invoca um Mini Disco Voador amigável
 				O raio trator do disco voador desacelera inimigos atingidos por ele
 				'Basta mantê-lo no modo avião'
@@ -1615,7 +1603,7 @@ Mods: {
 				'''
 				Oferece imunidade a Azarado e Estonteado
 				Aumenta a taxa de criação
-				Inimigos com 2000 ou menos de vida máxima deixarão cair o dobro de espólios
+				Inimigos não-chefes deixarão cair o dobro de espólios
 				'Definitivamente não está vivo'
 				'''
 			
@@ -1745,8 +1733,8 @@ Mods: {
 			ConjuristsSoul:
 				'''
 				30% de aumento nos danos por lacaios
-				Aumenta o número máximo de lacaios em 3
-				Aumenta o número máximo de sentinelas em 3
+				Aumenta o número máximo de lacaios em 5
+				Aumenta o número máximo de sentinelas em 5
 				Maior recuo dos lacaios
 				'Um exército à sua disposição'
 				'''
@@ -1888,8 +1876,8 @@ Mods: {
 				Críticos causam 4x em vez de 2x
 				Todas as armas têm o recuo dobrado
 				Aumenta a sua mana máxima em 300
-				Aumenta o número máximo de lacaios em 4
-				Aumenta o número máximo de sentinelas em 4
+				Aumenta o número máximo de lacaios em 2
+				Aumenta o número máximo de sentinelas em 2
 				Todos os ataques infligem Chamas do Universo
 				Efeitos da Manopla de Fogo, Bolsa de Ioiô, e Casco Celestial
 				Efeitos da Luneta do Atirador, Algemas Celestiais e Flor de Mana
@@ -2477,7 +2465,7 @@ Mods: {
 			StaffOfUnleashedOcean:
 				'''
 				Invoca o Duque Peixe-dragão para lutar por você
-				Precisa de 2 espaços de lacaio
+				O Duque Peixe-dragão ignora até 400 de defesa do inimigo
 				'Agora, canalize a sua raiva contra eles!'
 				'''
 			
@@ -2541,6 +2529,13 @@ Mods: {
 				'''
 				Invoca o Bebê
 				Não deve ser confundido com andróides criminosos
+				'''
+			
+			NanoCore:
+				'''
+				Ao segurar isso, 7 nanounidades aparecerão e construirão armas.
+				Clique com o botão esquerdo para atacar e clique com o botão direito para trocar de arma.
+				'A ciência está ao nosso lado.'
 				'''
 			
 			
@@ -3208,6 +3203,12 @@ Mods: {
 			SpikyLure: Isca com Espinhos
 			WaterStream: Fluxo de Água
 			Crimetroid: Crimetroid
+			NanoBase: Nanonúcleo
+			NanoBlade: Lâmina de Plasma
+			NanoProbe: Nanosonda
+			PlasmaArrow: Flecha de Plasma
+			PlasmaDeathray: Raio da Morte de Plasma
+			PlasmaProj: Raio de Plasma
 		}
 		
 		
@@ -3302,6 +3303,7 @@ Mods: {
 			MasochistWrongDifficulty: O mundo deve ser de dificuldade Perito ou mais difícil!
 			MasochistModeUnlocked: "{$Mods.FargowiltasSouls.ItemName.Masochist} surge com novos poderes...!"
 			MasochistPreTooltip: Ativa o Modo Masoquista quando usado no Modo Mestre
+			ForgottenGift: '''mundo atualmente maso: '''
 
 			FargoSoulsWorld: {
 				EternityOn: Modo Eternidade ativado!
@@ -3349,10 +3351,14 @@ Mods: {
 			PatreonItem: ">> Item do Patreon <<"
 			PatreonNameEffect: Seus efeitos especiais do patreon estão ativos
 
-			SkeletronRegrow: renasceu os seus braços!
-			SkeletronGuardian: entrou na forma do Guardião do Calabouço!
+			SkeletronRegrow: {$NPCName.SkeletronHead} renasceu seus braços!
+			SkeletronPrimeRegrow: "{$NPCName.SkeletronPrime} renasceu seus braços!"
+			SkeletronGuardian: {$NPCName.SkeletronHead} entrou na forma de Guardião do Calabouço!
+			SkeletronPrimeGuardian: "{$NPCName.SkeletronPrime} entrou na forma de Guardião do Calabouço!"
 			TwinsEndure: aguentou o golpe fatal para lutar junto de seu gêmeo!
 			GelatinSubjects: Sujeitos Gelatinosos acordaram!
+			RoyalSubject: Sujeito Real acordou!
+			QueenBeeEnrage: "{$NPCName.QueenBee} se enfureceu fora da Selva Subterrânea!"
 			
 			MoonsDeathPenalty: O progresso da onda regrediu!
 		}
@@ -3982,7 +3988,7 @@ Mods: {
 					Bônus de armadura de Auric Tesla
 					Bônus de armadura de Mollusk
 					Bônus de armadura de Reaver
-					Bônus de armadura de Ataxia
+					Bônus de armadura de Hydrothermic
 					Bônus de armadura de Astral
 					Bônus de armadura de Tarragon
 					Bônus de armadura de Demonshade
@@ -4013,7 +4019,7 @@ Mods: {
 					Efeitos de The Sponge
 					Efeitos de Giant Pearl
 					Efeitos de Amidias' Pendant
-					Efeitos de Fabled Tortoise Shell
+					Efeitos de Flame-Licked Shell
 					Efeitos de Plague Hive
 					Efeitos de Astral Arcanum
 					Efeitos de Hide of Astrum Deus
@@ -4105,6 +4111,9 @@ Mods: {
 			WhipStack: Efeitos e efeitos negativos de chicote não podem acumular
 			MinionStack: O dano dos lacaios diminui ao invocar mais de 3 cópias (o limite do efeito é 12)
 			SummonMulticlass: O dano por lacaios diminui quando você ataca usando outras classes (exceto no EdA)
+			
+			ShadowDodge: Modo Eternidade: Esquivar reduzirá sua velocidade de ataque
+			IceBarrier: Modo Eternidade: 10% de redução nos danos
 		}
 
 		
