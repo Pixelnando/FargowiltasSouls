@@ -546,6 +546,9 @@ Mods: {
 			TopHatSquirrelCaught: Esquilo com Cartola
 			UniversalCollapse: Colapso Universal
 			
+			// Mounts
+			AcornConstruct: Fusão de Bolotas
+
 			// Pets
 			AccursedRags: Trapos Malditos
 			BabyScythe: Foice Bebê
@@ -1218,7 +1221,6 @@ Mods: {
 				'''
 			
 			// Expert
-			
 			BoxofGizmos:
 				'''
 				Funciona em seu inventário
@@ -1235,7 +1237,6 @@ Mods: {
 				'''
 			
 			// Masomode
-			
 			AbominableWand:
 				'''
 				Oferece imunidade a Presa Abominável e Presença Abominável
@@ -1718,7 +1719,6 @@ Mods: {
 				'''
 			
 			// Souls
-			
 			ArchWizardsSoul:
 				'''
 				30% de aumento nos danos por magia
@@ -1940,7 +1940,6 @@ Mods: {
 				'''
 			
 			// Armor
-			
 			EridanusBattleplate:
 				'''
 				10% de aumento nos danos
@@ -2044,14 +2043,13 @@ Mods: {
 				'''
 			
 			// Boss Bags
-			
 			AbomBag: Clique com o botão direito para abrir
 			CosmosBag: Clique com o botão direito para abrir
 			DeviBag: Clique com o botão direito para abrir
 			MutantBag: Clique com o botão direito para abrir
 			TrojanSquirrelBag: Clique com o botão direito para abrir
-			// Consumables
 			
+			// Consumables
 			DeerSinew:
 				'''
 				Permite correr
@@ -2088,7 +2086,6 @@ Mods: {
 			RabiesVaccine: Oferece imunidade permanente a Mordida Feroz
 			
 			// Materials
-			
 			Eridanium: Um fragmento de poder cósmico
 			EternalEnergy:
 				'''
@@ -2097,7 +2094,6 @@ Mods: {
 				'''
 			
 			// Misc
-			
 			EternityAdvisor: Sugere equipamentos para o Modo Eternidade baseado na progressão
 			GalacticReformer:
 				'''
@@ -2112,8 +2108,10 @@ Mods: {
 			
 			UniversalCollapse: Destrói o Universo
 			
+			// Mounts
+			AcornConstruct: Monte no Esquilo
+
 			// Pets
-			
 			AccursedRags:
 				'''
 				Invoca um pequeno sarcófago maldito
@@ -2159,7 +2157,6 @@ Mods: {
 				'''
 			
 			//Summons
-			
 			AbominationnVoodooDoll:
 				'''
 				Invoca o Abominationn para a sua cidade
@@ -2184,7 +2181,6 @@ Mods: {
 			
 			// Weapons
 			// Boss Drops
-			
 			BoneZone:
 				'''
 				Utiliza ossos como munição
@@ -2267,7 +2263,6 @@ Mods: {
 				'''
 			
 			// Challengers
-			
 			KamikazeSquirrelStaff:
 				'''
 				Invoca esquilos amigáveis para abraçar os seus inimigos
@@ -2297,7 +2292,6 @@ Mods: {
 			TreeSword: Dispara uma bolota
 			
 			// Final Upgrades
-			
 			HentaiSpear:
 				'''
 				Tem ataques diferentes ao usar o botão esquerdo ou direito
@@ -2329,7 +2323,6 @@ Mods: {
 				'''
 			
 			// Misc
-			
 			Mahoguny:
 				'''
 				Utiliza bolotas como munição
@@ -2350,9 +2343,7 @@ Mods: {
 			Vineslinger: Atingir um inimigo dispara folhas
 			
 			// Swarm Drops
-			
-			// Not sure how to translate Big Brain Buster's tooltip
-			
+			/// Not sure how to translate Big Brain Buster's tooltip
 			Blender:
 				'''
 				'A recompensa por matar muitos...'
@@ -2444,7 +2435,6 @@ Mods: {
 				'''
 			
 			// Others
-			
 			ForgorGift:
 				'''
 				[c/ff0000:Item de depuração]
@@ -2474,7 +2464,6 @@ Mods: {
 				'''
 			
 			// Patreon
-			
 			MedallionoftheFallenKing: Invoca uma Geleia Rei que escala com o dano por invocação
 			ComputationOrb:
 				'''
@@ -3134,8 +3123,6 @@ Mods: {
 			MutantTrueEyeS: Verdadeiro Olho do Mutant
 			MutantTrueEyeSphere: Esfera Fantasmagórica
 			MutantTyphoon: Tufão de Navalhas
-			
-			AcornConstruct: Monte no Esquilo
 			
 			AccursedSarcophagus: Sarcófago Maldito
 			BabyAbom: Abom Bebê
