@@ -49,7 +49,7 @@ $"[i:{ModContent.ItemType<TitaniumEnchant>()}] Attacks generate titanium shards,
             string tooltip_pt =
 @"[i:{0}] Oferece um pulo explosivo e você explode ao ser atingido
 [i:{2}] Pare de atacar para aumentar gradualmente a velocidade do ataque por até 5 segundos
-[i:{1}] Concede Cura rápida depois de atacar um inimigo e invoca esferas de cura baseada na cura
+[i:{1}] Concede Cura rápida depois de atacar um inimigo e invoca esferas de vida baseada na cura
 [i:{3}] Ataques invocam pétalas de flores e efeitos negativos causam 4x o dano
 [i:{4}] Toda arma disparada se dividirá em 3, causará 50% de dano e terá 50% menos quadros de imunidade
 [i:{5}] Ataques geram fragmentos de titânio, atingir o máximo concede Escudo de Titânio
