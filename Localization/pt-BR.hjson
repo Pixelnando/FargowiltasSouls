@@ -25,15 +25,25 @@ Mods: {
 				Reduz a defesa em 20, vida máxima em 10%, e redução de danos em 15%
 				'''
 
-			Eridanus:
+			EridanusOff:
 				'''
-				Aperte {0} duas vezes para alternar a bênção de Eridanus e fortalecer uma classe de armas
+				20% de aumento nos danos para sua classe de armas atual
+				10% de aumento na chance de acerto crítico para sua classe de armas atual
+				10% de aumento na velocidade do ataque pra sua classe de armas atual
+				Aperte {0} duas vezes para ativar a bênção de Eridanus 
+				'''
+			
+			EridanusOn:
+				'''
+				A bênção de Eridanus fortalece uma classe de armas
 				A classe fortalecida muda a cada 10 segundos
 				Eridanus luta ao seu lado quando você usa a classe fortalecida
-				80% de aumento nos danos, 30% de aumento na chance de acerto crítico, e 30% de aumento na velocidade do ataque para a classe fortalecida
-				Quando a bênção de Eridanus está desativada, 20% de aumento nos danos e 10% de aumento na chance de acerto crítico para sua classe de armas atual
+				80% de aumento nos danos para a classe fortalecida
+				30% de aumento na chance de acerto crítico para a classe fortalecida
+				30% de aumento na velocidade do ataque para a classe fortalecida
+				Aperte {0} duas vezes para desativar a bênção de Eridanus
 				'''
-
+			
 			Styx:
 				'''
 				20% de aumento nos danos da sua classe de armas atual
@@ -141,6 +151,8 @@ Mods: {
 			SouloftheMasochist: Alma dos Irmãos
 			TrueEyes: Verdadeiros Olhos de Cthulhu
 			TwinsEX: Gêmeos X
+
+			TrojanSquirrelMountBuff: Esquilo de Tróia
 			
 			AccursedSarcophagusBuff: Sarcófago Maldito
 			BabyAbomBuff: Abom Bebê
@@ -169,6 +181,8 @@ Mods: {
 			SuperBleed: Gêiser de Sangue
 			TimeFrozen: Tempo Congelado
 			TimeStopCooldown: Tempo de Recarga da Parada no Tempo
+			TitaniumCD: Tempo de Recarga do Escudo de Titânio
+			TitaniumDRBuff: Escudo de Titânio
 			VortexCD: Tempo de Recarga do Vórtice
 			
 			KingSlimeMinionBuff: Mini Geleia Rei
@@ -271,6 +285,8 @@ Mods: {
 			TrueEyes: Os olhos de Cthulhu protegerão você
 			TwinsEX: Os verdadeiros Gêmeos lutarão por você
 			
+			TrojanSquirrelMountBuff: Você está montado em um esquilo mecânico
+
 			AccursedSarcophagusBuff: Ele não tocará em nada
 			BabyAbomBuff: Fazendo kickflips em uma foice
 			BabySilhouetteBuff: Ele não verá a luz até que já esteja crescido
@@ -294,6 +310,8 @@ Mods: {
 			ShellHide: Os projéteis estão sendo bloqueados
 			TimeFrozen: Você está parado no tempo
 			TimeStopCooldown: Você não pode parar o tempo ainda
+			TitaniumCD: Você está carregando o Escudo de Titânio
+			TitaniumDRBuff: Você tem resistência adicional aos danos
 			VortexCD: Você não pode invocar outro vórtice ainda
 			
 			KingSlimeMinionBuff: A Mini Geleia Rei protegerá você
@@ -686,7 +704,7 @@ Mods: {
 				
 			AncientCobaltEnchant: 
 				'''
-				Oferece um pulo explosivo
+				Oferece um pulo explosivo que inflige Oleoso
 				'Kobold-o Antigo'
 				'''
 			
@@ -694,8 +712,7 @@ Mods: {
 				'''
 				Você ganha um escudo que pode refletir projéteis
 				Invoca uma Terraprisma familiar que fica mais forte com dano por invocação
-				Aumenta consideravelmente a velocidade dos lacaios
-				'Santificado seja a sua espada e escudo'
+				'Você tem poder suficiente para me empunhar?'
 				'''
 			
 			AncientShadowEnchant: 
@@ -762,7 +779,7 @@ Mods: {
 			
 			CobaltEnchant: 
 				'''
-				Oferece um pulo explosivo
+				Oferece um pulo explosivo que inflige Oleoso e brevemente concede invulnerabilidade
 				Quando você é atingido, você explode violentamente para machucar inimigos próximos
 				'Eu não posso acreditar que não é Paládio'
 				'''
@@ -785,10 +802,11 @@ Mods: {
 			CrystalAssassinEnchant: 
 				'''
 				Permite correr
-				Use a hotkey de Ninja para lançar uma bomba de fumaça, use-a novamente para teleportar-se a ela e ganhar o efeito Primeiro Ataque
+				Use a hotkey de Assassino para lançar uma bomba de fumaça, use-a novamente para teleportar-se a ela e ganhar o efeito Primeiro Ataque
 				Usar o Cajado da Discórdia também concederá esse efeito
 				Efeitos da Gelatina Volátil
-				'Enganosamente frágil'
+				O Primeiro Ataque garante que seu próximo ataque atinja um ponto fraco, causando 3x o dano e reduzindo a defesa em 10
+				'Sumiu!'
 				'''
 			
 			DarkArtistEnchant: 
@@ -803,7 +821,8 @@ Mods: {
 				
 			EbonwoodEnchant: 
 				'''
-				Você tem uma aura de Chamas das Sombras
+				Você é envolto por uma aura de Chamas das sombras
+				Qualquer projétil que causaria menos que 10 de dano a você é destruído
 				'Potencial inexplorado'
 				'''
 				
@@ -827,7 +846,7 @@ Mods: {
 				Gelos começarão a aparecer ao seu redor
 				Atacar lançará eles na direção do cursor
 				Quando eles atingem um inimigo, ele é congelado
-				Aperte a tecla Congelar para esfriar tudo por 15 segundos
+				Aperte a tecla Congelar para esfriar tudo por 20 segundos
 				Todos os projéteis hostis se movem na metade da velocidade
 				'Vamos cobrir o mundo em um congelamento profundo'
 				'''
@@ -865,10 +884,9 @@ Mods: {
 			
 			IronEnchant: 
 				'''
-				Clique com o botão direito para defender-se com seu escudo
-				Defenda pouco antes de ser atingido para negar o dano
 				Você atrai itens de um alcance maior
-				'Malhe no ferro enquanto está quente'
+				33% de chance de não consumir ingredientes de criação em uma Bigorna de Ferro
+				'Eita, ferrou!'
 				'''
 			
 			JungleEnchant: 
@@ -881,6 +899,7 @@ Mods: {
 			
 			LeadEnchant: 
 				'''
+				Você sofre 40% menos dano de efeitos negativos
 				Ataques infligem inimigos com Envenenamento por Chumbo
 				Envenenamento por Chumbo causa danos ao longo do tempo e se espalha para inimigos próximos
 				'Não recomendado como comida'
@@ -888,6 +907,8 @@ Mods: {
 			
 			MeteorEnchant: 
 				'''
+				Reduz o impulso em 50%
+				Você deixa para trás uma rastro de chamas
 				Uma chuva de meteoros é iniciada a cada poucos segundos enquanto você ataca
 				'Derrube um draco neles'
 				'''
@@ -943,24 +964,24 @@ Mods: {
 			
 			NinjaEnchant: 
 				'''
-				Use a hotkey de Ninja para lançar uma bomba de fumaça, use-a novamente para teleportar-se a ela e ganhar o efeito Primeiro Ataque
-				O Primeiro Ataque garante que seu próximo ataque atinja um ponto vital, causando 3x o dano e reduzindo a defesa em 10
-				'Agora você me vê, agora não'
+				Aumenta drasticamente a velocidade dos projéteis
+				Reduz o dano para compensar pela velocidade aumentada
+				Aumenta a perfuração de blindagem em 10
+				'Ataque mais rápido do que o olho pode ver'
 				'''
 			
 			ObsidianEnchant: 
 				'''
 				Oferece imunidade a fogo e lava
 				Você tem movimento normal e pode nadar na lava
-				Enquanto você está na lava ou molhado de lava, seus ataques invocam explosões
-				Aumenta o alcance dos chicotes em 50%
+				Enquanto você está na lava ou molhado de lava, seus ataques invocam explosões e aplicam Estalinho
 				'A terra chama'
 				'''
 			
 			OrichalcumEnchant: 
 				'''
 				Pétalas de flores causarão danos adicionais em seu alvo e infligem Veneno de Oricalco
-				Efeitos negativos causarão 3x o dano
+				Efeitos negativos causarão 2,5x o dano
 				'A natureza te abençoa'
 				'''
 			
@@ -1018,7 +1039,7 @@ Mods: {
 			RichMahoganyEnchant: 
 				'''
 				Todos os ganchos puxam 1.5x mais rápido, disparam 2x mais rápido, e retraem 3x mais rápido
-				Enquanto você usa um gancho, você ganha 10 de defesa e um efeito de espinhos de 50%
+				Enquanto você usa um gancho, você ganha 10% de resistência aos danos para um ataque e um efeito de espinhos de 50%
 				'Irá manter você preso'
 				'''
 			
@@ -1057,16 +1078,15 @@ Mods: {
 				
 			SilverEnchant: 
 				'''
-				Invoca uma espada familiar que fica mais forte com dano por invocação
-				Aumenta a velocidade dos lacaios consideravelmente
-				Reduz o dano por lacaios para compensar pela velocidade aumentada
-				'Você tem poder suficiente para me empunhar?'
+				Clique com o botão direito para defender-se com seu escudo
+				Defenda pouco antes de ser atingido para negar o dano
+				'Reflexão'
 				'''
 			
 			SnowEnchant: 
 				'''
-				Invoca uma tempestade de neve no seu cursor
-				Qualquer projétil ou NPC na tempestade de neve é desacelerado em 50%
+				Aperte a tecla Congelar para esfriar tudo por 15 segundos
+				Há um tempo de recarga de 60 segundos para este efeito
 				'Está Queimando Frio Lá Fora'
 				'''
 				
@@ -1131,7 +1151,9 @@ Mods: {
 			
 			TitaniumEnchant: 
 				'''
-				Atacar gera uma barreira defensiva de fragmentos de titânio
+				Atacar gera uma barreira defensiva de até 20 fragmentos de titânio
+				Quando você atinge a quantidade máxima, você ganha 75% de resistência aos danos por 3 segundos
+				Isto tem um tempo de recarga de 10 segundos
 				'O poder de titânio na palma da sua mão'
 				'''
 			
@@ -1177,7 +1199,7 @@ Mods: {
 				
 			WoodEnchant:
 				'''
-				As entradas no bestiário são completadas duas vezes mais rápido
+				As entradas no bestiário e das bandeiras são completadas duas vezes mais rápido
 				Você recebe um disconto nas lojas com base na conclusão do bestiário
 				'''
 			
@@ -1267,8 +1289,8 @@ Mods: {
 			BetsysHeart:
 				'''
 				Oferece imunidade a Esvaído, Arma Ressecada e Armadura Ressecada
-				Seus ataques críticos infligem Maldição de Betsy
 				Aperte a tecla Corrida Especial para fazer uma corrida de bola de fogo invencível curta
+				Atingir inimigos com a corrida inflige Maldição de Betsy
 				'Levemente torrado e mal passado'
 				'''
 			
@@ -1433,7 +1455,6 @@ Mods: {
 				Oferece imunidade a Molhado, Eletrizado, Malha Oceânica, Mordida Oceânica, Sanguessuga da Lua, Maldição da Anulação e efeitos negativos aquáticos
 				Aumenta o dano e a chance a chance de acerto crítico em 10% e aumenta a redução de danos em 5%
 				Aumenta o tempo de voo em 100%
-				Seus ataques críticos infligem Maldição de Betsy
 				Clique com o botão direito para defender-se com sua capa
 				Você pode disparar ataques adicionais periodicamente dependendo do tipo da arma
 				Seus ataques críticos infligem Apodrecendo e Maldição de Betsy
@@ -1518,6 +1539,7 @@ Mods: {
 			NecromanticBrew:
 				'''
 				Oferece imunidade a Letárgico
+				Aumenta a velocidade enquanto faz uma corrida em 50%
 				Enquanto faz uma corrida, você sofre 75% menos dano de contato e reflete 100% do dano de contato no atacante
 				Invoca 2 braços do Esqueletron para bater nos inimigos
 				'A solução de crescimento ósseo de um inimigo derrotado'
@@ -1536,6 +1558,7 @@ Mods: {
 				Oferece imunidade a Julgamento
 				Reduz o tamanho da sua hurtbox para projéteis
 				Segure a tecla Selo de Precisão para desativar corridas e pulos duplos
+				O tamanha da sua hurtbox é reduzido mesmo quando não é exibido
 				'Esquiva tão perto que você quase consegue prová-lo'
 				'''
 			
@@ -1663,6 +1686,7 @@ Mods: {
 				Ao fazer corridas ou correr rapidamente, você criará um rastro de gadanhas sangrentas
 				Aperte a tecla Instalar Efeitos Negativos para ficar furioso
 				Aperte a tecla Corrida Especial para fazer uma corrida de abelha curta e rápida
+				Aumenta a velocidade enquanto faz uma corrida em 50%
 				Enquanto faz uma corrida, você sofre 75% menos dano de contato e reflete 100% do dano de contato no atacante
 				Abelhas e Vespas fracas tornam-se mais amigáveis
 				Invoca 2 braços do Esqueletron para bater nos inimigos
@@ -1874,7 +1898,7 @@ Mods: {
 				Todas as varas de pesca terão 10 iscas extras
 				Você pega peixes quase instantaneamente
 				Efeitos Sonar e Caixote permanentes
-				Efeitos da Bolsa do Pescador e Bolsa de Esporos
+				Efeitos da Bolsa do Pescador, Gel Volátil, e Bolsa de Esporos
 				Efeitos do Balão da Ferradura Cor-de-rosa e Equipamento de Mergulho Ártico
 				'Os peixes se pescam'
 				'''
@@ -3120,6 +3144,8 @@ Mods: {
 			MutantTrueEyeSphere: Esfera Fantasmagórica
 			MutantTyphoon: Tufão de Navalhas
 			
+			AcornConstruct: Monte no Esquilo
+			
 			AccursedSarcophagus: Sarcófago Maldito
 			BabyAbom: Abom Bebê
 			BabySilhouette: Silhueta Bebê
@@ -3483,7 +3509,7 @@ Mods: {
 			TerraHeader: "{$Mods.FargowiltasSouls.ItemName.TerraForce}"
 			CopperConfig: Cobre: Relâmpago
 			IronMConfig: Ferro: Ímã
-			IronSConfig: Ferro: Bloqueio
+			SilverS: Prata: Bloqueio
 			TinConfig: Estanho: Acertos Críticos
 			TungstenConfig: Tungstênio: Efeito do Item
 			TungstenProjConfig: Tungstênio: Efeito do Projétil
@@ -3540,7 +3566,7 @@ Mods: {
 			HallowedConfig: Consagrado Antigo: Familiar da Terraprisma
 			HallowSConfig: Consagrado Antigo: Escudo
 			SilverConfig: Prata: Familiar da Espada de Prata
-			SilverSpeedConfig: Prata: Velocidade dos Lacaios
+			NinjaSpeedConfig: Ninja: Velocidade dos Projéteis
 			SpectreConfig: Espectro: Esferas
 			TikiConfig: Tiki: Lacaios
 
@@ -3677,6 +3703,7 @@ Mods: {
 			TrawlerSporeConfig: Arrastão: Bolsa de Esporos
 			TrawlerConfig: Arrastão: Iscas Extras
 			TrawlerJumpConfig: Arrastão: Pulo
+			TrawlerGelConfig: Arrastão: Gelatina Volátil
 
 			EternityHeader: "{$Mods.FargowiltasSouls.ItemName.EternitySoul}"
 			EternityConfig: Eternidade: Acumulação
