@@ -1,4 +1,5 @@
 ﻿using FargowiltasSouls.EternityMode.NPCMatching;
+using FargowiltasSouls.Items.Accessories.Masomode;
 using System;
 using System.Linq;
 using Terraria;
@@ -30,7 +31,9 @@ namespace FargowiltasSouls.EternityMode.Content.Enemy
             NPCID.MushiLadybug,
             NPCID.AnomuraFungus,
             NPCID.ZombieMushroom,
-            NPCID.ZombieMushroomHat
+            NPCID.ZombieMushroomHat,
+            NPCID.IceGolem,
+            NPCID.SandElemental
         );
 
         public override void SetDefaults(NPC npc)
@@ -38,7 +41,15 @@ namespace FargowiltasSouls.EternityMode.Content.Enemy
             base.SetDefaults(npc);
 
             if (!Main.hardMode)
+            {
                 npc.defense /= 2;
+
+                if (npc.type == NPCID.IceGolem || npc.type == NPCID.SandElemental)
+                {
+                    npc.lifeMax = (int)Math.Round(npc.lifeMax * 0.4);
+                    npc.defense /= 2;
+                }
+            }
         }
 
         public override void ModifyNPCLoot(NPC npc, NPCLoot npcLoot)
@@ -95,6 +106,14 @@ namespace FargowiltasSouls.EternityMode.Content.Enemy
                 case NPCID.DuneSplicerHead:
                     FargoSoulsUtil.AddEarlyBirdDrop(npcLoot, ItemDropRule.Common(ItemID.SandstorminaBottle, 3));
                     FargoSoulsUtil.AddEarlyBirdDrop(npcLoot, ItemDropRule.Common(ItemID.OasisCrate));
+                    break;
+
+                case NPCID.IceGolem:
+                    npcLoot.RemoveWhere(rule => rule is CommonDrop drop && drop.itemId == ItemID.FrostCore && FargoSoulsUtil.LockEarlyBirdDrop(npcLoot, rule));
+                    break;
+
+                case NPCID.SandElemental:
+                    npcLoot.RemoveWhere(rule => rule is CommonDrop drop && drop.itemId == ItemID.AncientBattleArmorMaterial && FargoSoulsUtil.LockEarlyBirdDrop(npcLoot, rule));
                     break;
 
                 default: break;

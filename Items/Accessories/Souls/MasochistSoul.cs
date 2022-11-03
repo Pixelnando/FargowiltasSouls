@@ -74,8 +74,15 @@ Summons the aid of all Eternity Mode bosses to your side
         public override void UseItemFrame(Player player) => SandsofTime.Use(player);
         public override bool? UseItem(Player player) => true;
 
-        public override void UpdateInventory(Player player) => BionomicCluster.PassiveEffect(player, Item);
-        public override void UpdateVanity(Player player) => BionomicCluster.PassiveEffect(player, Item);
+        void PassiveEffect(Player player, Item item)
+        {
+            BionomicCluster.PassiveEffect(player, Item);
+
+            player.GetModPlayer<FargoSoulsPlayer>().CanAmmoCycle = true;
+        }
+
+        public override void UpdateInventory(Player player) => PassiveEffect(player, Item);
+        public override void UpdateVanity(Player player) => PassiveEffect(player, Item);
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             BionomicCluster.PassiveEffect(player, Item);
@@ -273,7 +280,8 @@ Summons the aid of all Eternity Mode bosses to your side
             fargoPlayer.BetsysHeartItem = Item;
 
             //pumpking's cape
-            fargoPlayer.PumpkingsCapeItem = Item;
+            if (player.GetToggleValue("MasoPump"))
+                fargoPlayer.PumpkingsCapeItem = Item;
 
             //celestial rune
             fargoPlayer.CelestialRuneItem = Item;

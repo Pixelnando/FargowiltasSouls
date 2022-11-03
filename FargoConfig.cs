@@ -52,7 +52,6 @@ namespace FargowiltasSouls
 
         #endregion
 
-
         #region patreon
 
         [Header($"$Mods.{ModName}.PatreonHeader")]
@@ -121,29 +120,12 @@ namespace FargowiltasSouls
         [ReloadRequired]
         public bool PatreonCrimetroid;
 
+        [Label($"$Mods.{ModName}.PatreonNanoCore")]
+        [DefaultValue(true)]
+        [ReloadRequired]
+        public bool PatreonNanoCore;
+
         #endregion
-
-
-        /*[Label($"$Mods.{ModName}.ThoriumHeader")]
-        public ThoriumToggles thoriumToggles = new ThoriumToggles();
-
-        [Label($"$Mods.{ModName}.CalamityHeader")]
-        public CalamityToggles calamityToggles = new CalamityToggles();*/
-
-
-        //soa soon tm
-
-        // Proper cloning of reference types is required because behind the scenes many instances of ModConfig classes co-exist.
-        /*public override ModConfig Clone()
-        {
-            var clone = (SoulConfig)base.Clone();
-
-            clone.walletToggles = walletToggles == null ? null : new WalletToggles();
-            clone.thoriumToggles = thoriumToggles == null ? null : new ThoriumToggles();
-            clone.calamityToggles = calamityToggles == null ? null : new CalamityToggles();
-
-            return clone;
-        }*/
 
         [OnDeserialized]
         internal void OnDeserializedMethod(StreamingContext context)

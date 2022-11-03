@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using FargowiltasSouls.Projectiles;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using Terraria;
@@ -29,6 +30,8 @@ namespace FargowiltasSouls.Patreon.Volknet.Projectiles
             Projectile.tileCollide = false;
             Projectile.ignoreWater = true;
             Projectile.penetrate = -1;
+            Projectile.GetGlobalProjectile<FargoSoulsGlobalProjectile>().DeletionImmuneRank = 2;
+            Projectile.GetGlobalProjectile<FargoSoulsGlobalProjectile>().TimeFreezeImmune = true;
         }
 
         public override bool PreDraw(ref Color lightColor)
@@ -37,8 +40,7 @@ namespace FargowiltasSouls.Patreon.Volknet.Projectiles
             Texture2D tex2 = FargowiltasSouls.Instance.Assets.Request<Texture2D>("Patreon/Volknet/Projectiles/NanoProbeGlow", ReLogic.Content.AssetRequestMode.ImmediateLoad).Value;
             
             Color color = Projectile.GetAlpha(lightColor);
-            ProjectileID.Sets.TrailCacheLength[Projectile.type] = 6;
-            for (float i = 0; i < ProjectileID.Sets.TrailCacheLength[Projectile.type]; i += 0.25f)
+            for (float i = 0; i < ProjectileID.Sets.TrailCacheLength[Projectile.type]; i += 0.2f)
             {
                 Color color27 = Color.LimeGreen * Projectile.Opacity;
                 if (i > 1f)
@@ -75,7 +77,8 @@ namespace FargowiltasSouls.Patreon.Volknet.Projectiles
                 {
                     Projectile.timeLeft = 2;
 
-
+                    if (Projectile.Distance(owner.Center) > 1200)
+                        Projectile.Center = owner.Center;
 
                     if (owner.GetModPlayer<NanoPlayer>().NanoCoreMode == 0)         //blade phase
                     {
@@ -182,7 +185,65 @@ namespace FargowiltasSouls.Patreon.Volknet.Projectiles
                         }
                     }
 
-                    else if (owner.GetModPlayer<NanoPlayer>().NanoCoreMode == 2)         //bombing phase
+                    else if (owner.GetModPlayer<NanoPlayer>().NanoCoreMode == 2)       //laser cannon
+                    {
+                        Vector2 TM = Main.MouseWorld - owner.Center;
+                        if (TM == Vector2.Zero) TM = new Vector2(0, -1);
+                        TM.Normalize();
+                        Vector2 TargetPos = Vector2.Zero;
+                        float TargetRot = 0;
+                        switch (Projectile.ai[0])
+                        {
+                            case 0:
+                                TargetPos = owner.Center + TM * 40;
+                                TargetRot = TM.ToRotation();
+                                break;
+                            case 1:
+                                TargetPos = owner.Center + TM * 55 + (TM.ToRotation() + MathHelper.Pi / 2).ToRotationVector2() * 15;
+                                TargetRot = TM.ToRotation();
+                                break;
+                            case 2:
+                                TargetPos = owner.Center + TM * 55 + (TM.ToRotation() - MathHelper.Pi / 2).ToRotationVector2() * 15;
+                                TargetRot = TM.ToRotation();
+                                break;
+                            case 3:
+                                TargetPos = owner.Center + TM * 85 + (TM.ToRotation() + MathHelper.Pi / 2).ToRotationVector2() * 15;
+                                TargetRot = TM.ToRotation();
+                                break;
+                            case 4:
+                                TargetPos = owner.Center + TM * 85 + (TM.ToRotation() - MathHelper.Pi / 2).ToRotationVector2() * 15;
+                                TargetRot = TM.ToRotation();
+                                break;
+                            case 5:
+                                TargetPos = owner.Center + TM * 115 + (TM.ToRotation() + MathHelper.Pi / 2).ToRotationVector2() * 15;
+                                TargetRot = TM.ToRotation();
+                                break;
+                            case 6:
+                                TargetPos = owner.Center + TM * 115 + (TM.ToRotation() - MathHelper.Pi / 2).ToRotationVector2() * 15;
+                                TargetRot = TM.ToRotation();
+                                break;
+                            default:
+                                break;
+                        }
+
+                        if (Projectile.ai[1] == 0)
+                        {
+                            Movement(TargetPos, 0.5f);
+                            Projectile.rotation = Projectile.velocity.ToRotation();
+                            if (Projectile.Distance(TargetPos) < 30)
+                            {
+                                Projectile.ai[1] = 1;
+                            }
+                        }
+                        else
+                        {
+                            Projectile.velocity = Vector2.Zero;
+                            Projectile.Center = TargetPos;
+                            Projectile.rotation = TargetRot;
+                        }
+                    }
+
+                    else if (owner.GetModPlayer<NanoPlayer>().NanoCoreMode == 3)         //bombing phase
                     {
                         Vector2 TM = Main.MouseWorld - owner.Center;
                         if (TM == Vector2.Zero) TM = new Vector2(0, -1);
@@ -240,64 +301,6 @@ namespace FargowiltasSouls.Patreon.Volknet.Projectiles
                         {
                             Projectile.ai[1] = 0;
                             OldChannel = true;
-                        }
-
-                        if (Projectile.ai[1] == 0)
-                        {
-                            Movement(TargetPos, 0.5f);
-                            Projectile.rotation = Projectile.velocity.ToRotation();
-                            if (Projectile.Distance(TargetPos) < 30)
-                            {
-                                Projectile.ai[1] = 1;
-                            }
-                        }
-                        else
-                        {
-                            Projectile.velocity = Vector2.Zero;
-                            Projectile.Center = TargetPos;
-                            Projectile.rotation = TargetRot;
-                        }
-                    }
-
-                    else if (owner.GetModPlayer<NanoPlayer>().NanoCoreMode == 3)       //laser cannon
-                    {
-                        Vector2 TM = Main.MouseWorld - owner.Center;
-                        if (TM == Vector2.Zero) TM = new Vector2(0, -1);
-                        TM.Normalize();
-                        Vector2 TargetPos = Vector2.Zero;
-                        float TargetRot = 0;
-                        switch (Projectile.ai[0])
-                        {
-                            case 0:
-                                TargetPos = owner.Center + TM * 40;
-                                TargetRot = TM.ToRotation();
-                                break;
-                            case 1:
-                                TargetPos = owner.Center + TM * 55 + (TM.ToRotation() + MathHelper.Pi / 2).ToRotationVector2() * 15;
-                                TargetRot = TM.ToRotation();
-                                break;
-                            case 2:
-                                TargetPos = owner.Center + TM * 55 + (TM.ToRotation() - MathHelper.Pi / 2).ToRotationVector2() * 15;
-                                TargetRot = TM.ToRotation();
-                                break;
-                            case 3:
-                                TargetPos = owner.Center + TM * 85 + (TM.ToRotation() + MathHelper.Pi / 2).ToRotationVector2() * 15;
-                                TargetRot = TM.ToRotation();
-                                break;
-                            case 4:
-                                TargetPos = owner.Center + TM * 85 + (TM.ToRotation() - MathHelper.Pi / 2).ToRotationVector2() * 15;
-                                TargetRot = TM.ToRotation();
-                                break;
-                            case 5:
-                                TargetPos = owner.Center + TM * 115 + (TM.ToRotation() + MathHelper.Pi / 2).ToRotationVector2() * 15;
-                                TargetRot = TM.ToRotation();
-                                break;
-                            case 6:
-                                TargetPos = owner.Center + TM * 115 + (TM.ToRotation() - MathHelper.Pi / 2).ToRotationVector2() * 15;
-                                TargetRot = TM.ToRotation();
-                                break;
-                            default:
-                                break;
                         }
 
                         if (Projectile.ai[1] == 0)

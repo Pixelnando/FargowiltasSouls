@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using FargowiltasSouls.Projectiles;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Linq;
 using Terraria;
@@ -32,14 +33,13 @@ namespace FargowiltasSouls.Patreon.Volknet.Projectiles
             Projectile.aiStyle = 1;
             AIType = ProjectileID.SaucerLaser;
             Projectile.friendly = true;
+            Projectile.DamageType = DamageClass.Summon;
             Projectile.alpha = 255;
             Projectile.timeLeft = 360;
             Projectile.tileCollide = false;
             Projectile.ignoreWater = true;
             Projectile.scale = 0.3f;
-            Projectile.penetrate = -1;
-            Projectile.usesLocalNPCImmunity = true;
-            Projectile.localNPCHitCooldown = 4;
+            Projectile.penetrate = 1;
             Projectile.extraUpdates = 2;
         }
 

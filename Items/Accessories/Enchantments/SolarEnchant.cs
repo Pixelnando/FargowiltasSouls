@@ -25,6 +25,7 @@ Attacks may inflict the Solar Flare debuff
         }
 
         protected override Color nameColor => new Color(254, 158, 35);
+        public override string wizardEffect => "";
 
         public override void SetDefaults()
         {
@@ -49,11 +50,11 @@ Attacks may inflict the Solar Flare debuff
             .AddIngredient(ItemID.SolarFlareBreastplate)
             .AddIngredient(ItemID.SolarFlareLeggings)
             //solar wings
-            .AddIngredient(ItemID.HelFire)
+            //.AddIngredient(ItemID.HelFire)
             //golem fist
             //xmas tree sword
-            //.AddIngredient(ItemID.SolarEruption);
             .AddIngredient(ItemID.DayBreak)
+            .AddIngredient(ItemID.SolarEruption)
             .AddIngredient(ItemID.StarWrath) //terrarian
 
             .AddTile(TileID.LunarCraftingStation)

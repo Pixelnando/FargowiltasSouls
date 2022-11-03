@@ -5,6 +5,7 @@ using System;
 using System.IO;
 using Terraria;
 using Terraria.Audio;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -35,7 +36,8 @@ namespace FargowiltasSouls.Patreon.DemonKing
             Projectile.friendly = true;
             Projectile.minion = true;
             Projectile.DamageType = DamageClass.Summon;
-            Projectile.minionSlots = 2;
+            Projectile.alpha = 100;
+            Projectile.minionSlots = 1;
             Projectile.tileCollide = false;
             Projectile.ignoreWater = true;
             Projectile.timeLeft = 10;
@@ -56,6 +58,13 @@ namespace FargowiltasSouls.Patreon.DemonKing
         {
             Projectile.localAI[0] = reader.ReadSingle();
             rotationOffset = reader.ReadSingle();
+        }
+
+        public override void OnSpawn(IEntitySource source)
+        {
+            base.OnSpawn(source);
+
+            Projectile.ArmorPenetration += 400;
         }
 
         bool spawn;
@@ -267,12 +276,6 @@ namespace FargowiltasSouls.Patreon.DemonKing
             Projectile.position += Projectile.velocity / 4f;
         }
 
-        public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
-        {
-            if (target.defense > 0)
-                damage += target.defense / 2;
-        }
-
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
             target.AddBuff(ModContent.BuffType<MutantNibble>(), 900);
@@ -298,10 +301,11 @@ namespace FargowiltasSouls.Patreon.DemonKing
             vel.Normalize();
             vel *= speed;
             int type = ModContent.ProjectileType<RazorbladeTyphoonFriendly2>();
+            int dmg = Projectile.originalDamage / 5;
             for (int i = 0; i < max; i++)
             {
                 vel = vel.RotatedBy(rotation);
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, vel, type, Projectile.damage,
+                FargoSoulsUtil.NewSummonProjectile(Projectile.GetSource_FromThis(), Projectile.Center, vel, type, dmg,
                     Projectile.knockBack / 4f, Projectile.owner, rotationModifier * Projectile.spriteDirection);
             }
         }

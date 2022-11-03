@@ -22,8 +22,6 @@ namespace FargowiltasSouls.Buffs
                     tip += "\n" + Language.GetTextValue("Mods.FargowiltasSouls.EModeBalance.ShadowDodge");
                 else if (type == BuffID.IceBarrier)
                     tip += "\n" + Language.GetTextValue("Mods.FargowiltasSouls.EModeBalance.IceBarrier");
-                else if (type == BuffID.ManaSickness)
-                    tip += "\n" + Language.GetTextValue("Mods.FargowiltasSouls.EModeBalance.ManaSickness");
             }
         }
 
@@ -52,7 +50,7 @@ namespace FargowiltasSouls.Buffs
                     break;
 
                 case BuffID.OnFire:
-                    if (FargoSoulsWorld.EternityMode && Main.raining && player.position.Y < Main.worldSurface
+                    if (FargoSoulsWorld.EternityMode && Main.raining && player.position.Y < Main.worldSurface * 16
                         && Framing.GetTileSafely(player.Center).WallType == WallID.None && player.buffTime[buffIndex] > 2)
                         player.buffTime[buffIndex] -= 1;
                     break;
@@ -106,8 +104,10 @@ namespace FargowiltasSouls.Buffs
             }
 
             if (FargoSoulsWorld.EternityMode && player.buffTime[buffIndex] > 5 && Main.debuff[type] && player.GetModPlayer<EModePlayer>().ShorterDebuffsTimer <= 0
-                && !Main.buffNoTimeDisplay[type] && type != BuffID.Tipsy && (!BuffID.Sets.NurseCannotRemoveDebuff[type] || type == BuffID.ManaSickness || type == BuffID.PotionSickness)
-                && !DebuffsToLetDecreaseNormally.Contains(type))
+                && !Main.buffNoTimeDisplay[type]
+                && type != BuffID.Tipsy && (!BuffID.Sets.NurseCannotRemoveDebuff[type] || type == BuffID.ManaSickness || type == BuffID.PotionSickness)
+                && !DebuffsToLetDecreaseNormally.Contains(type)
+                && !(type == BuffID.Confused && FargoSoulsUtil.BossIsAlive(ref EModeGlobalNPC.brainBoss, NPCID.BrainofCthulhu)))
             {
                 player.buffTime[buffIndex] -= 1;
             }
@@ -153,7 +153,7 @@ namespace FargowiltasSouls.Buffs
                     break;
 
                 case BuffID.OnFire:
-                    if (FargoSoulsWorld.EternityMode && Main.raining && npc.position.Y < Main.worldSurface
+                    if (FargoSoulsWorld.EternityMode && Main.raining && npc.position.Y < Main.worldSurface * 16
                         && Framing.GetTileSafely(npc.Center).WallType == WallID.None && npc.buffTime[buffIndex] > 2)
                         npc.buffTime[buffIndex] -= 1;
                     break;

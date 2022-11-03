@@ -1,103 +1,75 @@
-fixed chibi devi rollback
-nerfed turtle ench to 20 hits
-fish stick now uses m2 to throw sharknado sticks
-added unlucky debuff
-bats no longer guarantee feral bite
+emode devi medusa ray attack slightly slower
+maso destroyer probes stop shooting during coils
+emode ks
+	now tps to your elevation in p1 too, no longer teleports under you ever
+	p2 begins at 66%
+	special teleport that makes you turn around now happens at 33%
+wyvern, ice golem, sand elemental
+	spawn POST 1 BOSS in pre hardmode
+	drop pre hm crates
+	no longer drop hm crates in pre hm
+	drop their accessories guaranteed in pre hm
+snow ench buff, chill is 10->15sec
+frost ench buff, chill is 15->20sec and icicles inflict frostbite
+raised boreal ench damage cap from 20 to 30
+precision seal tooltip specifies you have smaller hurtbox even when not visible
+betsy's heart nerf
+	no longer inflict betsy curse on crit
+	dash inflicts betsy curse for 15 seconds
+ice queens crown
+	freeze extended 1 -> 1.5sec
+	chill extended 2 -> 3sec
+gutted/pure heart buff, creepers have 95% DR against contact damage, was 50%
+reduced volume of lump of flesh ray
+boc nerfs
+	brain clone takes 0 damage instead of pretending it takes damage
+	real brain only cleanses debuffs when tp'ing, previously fully debuff immune
+	adjusted timing of p2 confusion and attacks, hopefully more intuitive
+ml suns do no damage until thrown and look more obviously "thrown"
+devi does an "empty" tp before rune wizard bolts
+leash of cthulhu buff +2 damage
+jungle ench jump is refreshed by grappling like normal double jumps
+removed mining helmet boosting undead miner spawn rate
+necro brew buff, your dashes are much faster
 
-p3 refills mutant hp, change the curve so it ticks down gradually over attacks
-timestop and golden shell are disabled in p3
-slightly reduced duration of mutant p3 attacks
-increased size of mutant sword hitboxes to reduce gaps between them
+stinger nerf, bee dash cd +1sec
+lead ench buff, halves dot taken
+fixed eri and cultist minion other class projs not having correct crit chance
+eri armor set bonus tooltip changes based on mode
+eri armor buff, gives +10% weapon speed with blessing off
+emode devi enters p2 at 66%
+sand ele doesnt spawn sand sharks pre hm
+ice golem and sand ele pre hm have 40% life and 25% defense, was 50% 50%
+spaz nerf, pauses on p3 enter isntead of instantly dashing
+twins nerf, spaz watches harmlessly in p1 while reti does spin
+added patreon toggle for nano core
+twins buff, have 33% DR while doing ray
 
-concentrated rainbow matter buff: now acts like mana flower for healing potions
-biocluster is post 1 mech
-you can now get iron ench frame data when equipping it with dread shell
-tribal charm gives +30% damage when manually clicking to attack, not inventory effect
-magical bulb
-	regen maxes at +4 life per sec but its based on lighting now
-	can debuff cleanse on a cd
-fixed tribal charm and mystic skull inv effects not working in vanity slot
-frigid gemstone rework
-	removed frostfireballs
-	now gives ice rod hotkey and works from inv
-pumpkings cape rework
-	removed secondary attacks
-	you now gain a dread shell-esque parry
-	parry lifesteals the blocked damage and creates scythes with damage is based on blocked damage
-fused lens rework
-	only gives bonuses when debuffed
-	you now have a debuff install
-moved stunned immune from skull charm to sinister icon
-agitating lens rework
-	removed buffs below 50% life
-	you now get a berserker install, 6 seconds of glass cannon and then 2sec stunned:
-		+50% attack speed
-		+30% damage, crit, move speed
-		knockback immunity
-		supersonic no momentum
-		you're forced to attack and forced to run
-		-30% DR
-		-30 defense
-queen stinger rework
-	removed poison imbue
-	removed honey on hit
-	you get a betsy dash lite (same frame data as betsy dash but no iframes)
-necro brew buff, you gain thorns and take less contact damage when dashing (also u spin its funny)
-ground stick rework
-	you supercharge when hit by electric or ray attacks
-	must supercharge to inflict electrified/lightning rod
-	supercharge also buffs move speed, attack speed, and your probes
-	when not already supercharged, you take half damage from the attack that supercharges you
-wretched pouch rework
-	only shadowflames while you're attacking
-	gives +60% damage while you're attacking
-	cripples your speed to unusable levels while you're attacking
-lihzahrd treasure box
-	boulders are now fastfall only, less screen clutter
-	added an explosion on impact
-improved chalice cultist fireball homing so they disappear faster, less screen clutter
-chalice cultist ice mist is more translucent
-made friendly ancient visions more translucent and less dust
-buffed eater staff damage from 10 to 12, but it has to dig in blocks now
-slimy shield buff, balls inflict oiled (this especially needs testing)
-lesser squrrls spawned in timber p1 cannot make bolts in p2
+tried fixing boc despawn glitch
+nekomi nerf, regen 1->0.5hp/s
+devi has more life
+ebonwood force doesnt instakill everything, but base ench does have shadowflame again
+betsy dash dash curse debuff length buffed 15->20s
+boss arenas disable your items while sucking you in
+devi rune wizard empty tp is faster again
+rich mahog DR applies for one hit per grapple, nerfed force from +50% to +30% DR
+adjusted titanium DR so its 50/75% isnt additive or overriding
+toggle localization fixes
+made boc ichor sprite visible
+fused lens install is now toggled with the debuff install key
+adjusted boc confusion timing again
+rockeater launcher
+	rocket no longer pierces at all
+	removed guaranteed crit on sweetspot
+	adjusted knockback
+	reduced attack speed
+	made the sweetspot much more lenient
+fixed pumpking cape toggle not working
 
-nekomi armor
-	increased minion slots from 1 to 2
-	gives 7% more damage and crit chance, existing damage/crit bonuses are now omniclass instead of adaptive
-	increased damage of super by x1.33
-	increased regen from 0.5 to 1 life per sec
-agi lens berserker install
-	stun is 3sec and you take more damage during stun
-	reduced from 30% offenses up & defenses down to 20% each
-added gravedigger shovel to miner ench recipe, replaces gold pickaxe
-destroyer can now spin both CW and CCW, whichever is closer to his current angle when he starts coil
-man eater and nutcracker instakill male characters in maso
-
-wandering eye fish and tim spawn their extra enemies staggered now
-fixed these rays not working with mutant mod transparent projs config
-	gemini glaives m2
-	styx gazer m2
-	sparkling love m1 and m2
-abom & mutant dont despawn when you go underground, but fly up to pull you upwards with them
-	they can still despawn if they get far enough away while trying to do this or in p1
-blood nautilus is considered a boss while alive, to block enemy spawns during fight
-nerfed pearlwood ench, has 20 (force 80) base damage instead of copying the damage of your attack
-fixed(?) destroyer body entering the coil range if he rotated some way, either clockwise or CCW
-top hat squirrel weapon crafts using top hat squirrel (critter) instead of top hat squirrel (town npc)
-top hat squirrel critter and town npc can be used in recipes, e.g. for squirrel coat of arms
-wof drops a TON of extra loot when killed
-fixed godmode glitch caused by unequipping the parry shields mid-parry
-tungsten nerf, damage/crit boost only applies to true melee swords (unless force)
-
-box of gizmos gives you spelunker glowstick effect when standing still
-fixed diffractor blaster rays not working with transparent projs config
-raised pearlwood ench base damage from 20 to 40
-saucer control console saucer only fires deathray when you hold m2
-added nano core, overpowered mutant-tier patreon weapon
-
-nano core visual tweaks, added nanites to recipe
-enchantment resprites
-eow can do the wave
-eow has 3 sec resistance to pierce when spawned
-gold ench smart detects coins in coin slots and will move them to piggy bank
+abom
+	can now strafe around you while shooting scythes
+	no contact damage and sharper movement when shooting scythes
+	wont spawn saucers in p1 anymore
+	only spawns 3 saucers in p2
+	p2 scythe splits into 8, was 10
+added nice dust to rockeater on sweetspot
