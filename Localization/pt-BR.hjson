@@ -3373,7 +3373,7 @@ Mods: {
 			PatreonItem: ">> Item do Patreon <<"
 			PatreonNameEffect: Seus efeitos especiais do patreon estão ativos
 
-			SkeletronRegrow: {$NPCName.SkeletronHead} renasceu seus braços!
+			SkeletronRegrow: "{$NPCName.SkeletronHead} renasceu seus braços!"
 			SkeletronPrimeRegrow: "{$NPCName.SkeletronPrime} renasceu seus braços!"
 			SkeletronGuardian: {$NPCName.SkeletronHead} entrou na forma de Guardião do Calabouço!
 			SkeletronPrimeGuardian: "{$NPCName.SkeletronPrime} entrou na forma de Guardião do Calabouço!"
