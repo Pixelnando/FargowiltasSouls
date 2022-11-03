@@ -3375,7 +3375,7 @@ Mods: {
 
 			SkeletronRegrow: "{$NPCName.SkeletronHead} renasceu seus braços!"
 			SkeletronPrimeRegrow: "{$NPCName.SkeletronPrime} renasceu seus braços!"
-			SkeletronGuardian: {$NPCName.SkeletronHead} entrou na forma de Guardião do Calabouço!
+			SkeletronGuardian: "{$NPCName.SkeletronHead} entrou na forma de Guardião do Calabouço!"
 			SkeletronPrimeGuardian: "{$NPCName.SkeletronPrime} entrou na forma de Guardião do Calabouço!"
 			TwinsEndure: aguentou o golpe fatal para lutar junto de seu gêmeo!
 			GelatinSubjects: Sujeitos Gelatinosos acordaram!
