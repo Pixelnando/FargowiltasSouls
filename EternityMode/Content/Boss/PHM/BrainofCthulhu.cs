@@ -26,6 +26,7 @@ namespace FargowiltasSouls.EternityMode.Content.Boss.PHM
 
         public int ConfusionTimer;
         public int IllusionTimer;
+        public int ForceDespawnTimer;
 
         public bool EnteredPhase2;
 
@@ -71,9 +72,16 @@ namespace FargowiltasSouls.EternityMode.Content.Boss.PHM
 
             if (!npc.HasValidTarget || npc.Distance(Main.player[npc.target].Center) > 3000)
             {
-                npc.velocity.Y += 0.75f;
-                if (npc.timeLeft > 120)
-                    npc.timeLeft = 120;
+                if (++ForceDespawnTimer > 60)
+                {
+                    npc.velocity.Y += 0.75f;
+                    if (npc.timeLeft > 60)
+                        npc.timeLeft = 60;
+                }
+            }
+            else
+            {
+                ForceDespawnTimer = 0;
             }
 
             if (npc.alpha > 0 && (npc.ai[0] == 2 || npc.ai[0] == -3) && npc.HasValidTarget) //stay at a minimum distance
@@ -89,9 +97,9 @@ namespace FargowiltasSouls.EternityMode.Content.Boss.PHM
 
             if (EnteredPhase2)
             {
-                if (npc.buffType[0] != 0) //constant debuff cleanse
+                //debuff cleanse when tp'ing
+                if (npc.alpha > 0 && npc.buffType[0] != 0)
                 {
-                    npc.buffImmune[npc.buffType[0]] = true;
                     npc.DelBuff(0);
                 }
 
@@ -117,6 +125,7 @@ namespace FargowiltasSouls.EternityMode.Content.Boss.PHM
                 };
 
                 int confusionThreshold = FargoSoulsWorld.MasochistModeReal ? 240 : 300;
+                int confusionThreshold2 = confusionThreshold - 60;
 
                 if (--ConfusionTimer < 0)
                 {
@@ -178,7 +187,7 @@ namespace FargowiltasSouls.EternityMode.Content.Boss.PHM
                     npc.netUpdate = true;
                     NetSync(npc);
                 }
-                else if (ConfusionTimer == confusionThreshold - 60)
+                else if (ConfusionTimer == confusionThreshold2)
                 {
                     //npc.netUpdate = true; //disabled because might be causing mp issues???
                     //NetSync(npc);
@@ -196,7 +205,7 @@ namespace FargowiltasSouls.EternityMode.Content.Boss.PHM
 
                     if (npc.Distance(Main.LocalPlayer.Center) < 3000 && !Main.LocalPlayer.HasBuff(BuffID.Confused)) //inflict confusion
                     {
-                        FargoSoulsUtil.AddDebuffFixedDuration(Main.LocalPlayer, BuffID.Confused, confusionThreshold + 5);
+                        FargoSoulsUtil.AddDebuffFixedDuration(Main.LocalPlayer, BuffID.Confused, confusionThreshold2 + 5);
                     }
                 }
 

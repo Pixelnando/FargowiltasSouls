@@ -12,12 +12,13 @@ namespace FargowiltasSouls.Items.Accessories.Enchantments
 
             DisplayName.SetDefault("Snow Enchantment");
             Tooltip.SetDefault(
-@"Press the Freeze Key to chill everything for 10 seconds
+@"Press the Freeze Key to chill everything for 15 seconds
 There is a 60 second cooldown for this effect
 'It's Burning Cold Outside'");
         }
 
         protected override Color nameColor => new Color(37, 195, 242);
+        public override string wizardEffect => "";
 
         public override void SetDefaults()
         {

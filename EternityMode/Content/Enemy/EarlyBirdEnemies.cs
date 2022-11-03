@@ -45,7 +45,10 @@ namespace FargowiltasSouls.EternityMode.Content.Enemy
                 npc.defense /= 2;
 
                 if (npc.type == NPCID.IceGolem || npc.type == NPCID.SandElemental)
-                    npc.lifeMax /= 2;
+                {
+                    npc.lifeMax = (int)Math.Round(npc.lifeMax * 0.4);
+                    npc.defense /= 2;
+                }
             }
         }
 
@@ -107,12 +110,10 @@ namespace FargowiltasSouls.EternityMode.Content.Enemy
 
                 case NPCID.IceGolem:
                     npcLoot.RemoveWhere(rule => rule is CommonDrop drop && drop.itemId == ItemID.FrostCore && FargoSoulsUtil.LockEarlyBirdDrop(npcLoot, rule));
-                    FargoSoulsUtil.AddEarlyBirdDrop(npcLoot, ItemDropRule.Common(ModContent.ItemType<FrigidGemstone>()));
                     break;
 
                 case NPCID.SandElemental:
                     npcLoot.RemoveWhere(rule => rule is CommonDrop drop && drop.itemId == ItemID.AncientBattleArmorMaterial && FargoSoulsUtil.LockEarlyBirdDrop(npcLoot, rule));
-                    FargoSoulsUtil.AddEarlyBirdDrop(npcLoot, ItemDropRule.Common(ModContent.ItemType<SandsofTime>()));
                     break;
 
                 default: break;

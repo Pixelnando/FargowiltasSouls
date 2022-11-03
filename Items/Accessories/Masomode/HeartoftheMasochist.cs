@@ -22,7 +22,6 @@ Grants immunity to Feral Bite, Mutant Nibble, Flipped, Unstable, Distorted, and 
 Grants immunity to Wet, Electrified, Oceanic Maul, Smite, Moon Leech, Nullification Curse, and water debuffs
 Increases damage and critical strike chance by 10% and increases damage reduction by 5%
 Increases flight time by 100%
-Your critical strikes inflict Betsy's Curse
 Right Click to guard with your cape
 Press the Special Dash key to perform a short invincible fireball dash
 Press the Ammo Cycle key to cycle ammos (this effect works passively from inventory)
@@ -82,7 +81,8 @@ Summons a friendly Mini Saucer and true eyes of Cthulhu
 
             //pumpking's cape
             player.buffImmune[ModContent.BuffType<LivingWasteland>()] = true;
-            fargoPlayer.PumpkingsCapeItem = Item;
+            if (player.GetToggleValue("MasoPump"))
+                fargoPlayer.PumpkingsCapeItem = Item;
 
             //ice queen's crown
             fargoPlayer.IceQueensCrown = true;
